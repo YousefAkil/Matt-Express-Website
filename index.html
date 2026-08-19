@@ -49,7 +49,7 @@
     <sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
       <nav style="display:flex;flex-direction:column;padding:4px 16px 18px;background:#fff;border-top:1px solid #e6e6e8">
           <a href="#drivers" onClick="{{ closeMenu }}" style="color:#101012;font-size:17px;font-weight:800;text-transform:uppercase;letter-spacing:0.06em;padding:14px 0;border-bottom:1px solid #e6e6e8">Drivers</a>
-          <a href="#shippers" onClick="{{ closeMenu }}" style="color:#101012;font-size:17px;font-weight:800;text-transform:uppercase;letter-spacing:0.06em;padding:14px 0;border-bottom:1px solid #e6e6e8">Shippers</a>
+          <a href="shippers.html" onClick="{{ closeMenu }}" style="color:#101012;font-size:17px;font-weight:800;text-transform:uppercase;letter-spacing:0.06em;padding:14px 0;border-bottom:1px solid #e6e6e8">Shippers</a>
           <a href="mechanic-shop.html" onClick="{{ closeMenu }}" style="color:#101012;font-size:17px;font-weight:800;text-transform:uppercase;letter-spacing:0.06em;padding:14px 0;border-bottom:1px solid #e6e6e8">Mechanic Shop</a>
           <a href="https://www.dallasbigrigparking.com" target="_blank" rel="noopener" onClick="{{ closeMenu }}" style="color:#101012;font-size:17px;font-weight:800;text-transform:uppercase;letter-spacing:0.06em;padding:14px 0;border-bottom:1px solid #e6e6e8">Truck Parking</a>
           <a href="#about" onClick="{{ closeMenu }}" style="color:#101012;font-size:17px;font-weight:800;text-transform:uppercase;letter-spacing:0.06em;padding:14px 0;border-bottom:1px solid #e6e6e8">About</a>
@@ -65,7 +65,7 @@
       <a href="#top" style="display:block;flex:0 0 auto"><img src="assets/logo-mark.png" alt="Matt Express Inc." style="height:clamp(30px,7vw,42px);width:auto;display:block"></a>
       <nav style="display:flex;align-items:center;gap:clamp(12px,1.6vw,28px);font-size:clamp(12px,1.05vw,14px);font-weight:700;text-transform:uppercase;letter-spacing:0.05em;flex-wrap:wrap;row-gap:8px;min-width:0;flex:1 1 auto">
         <a href="#drivers" style="color:#101012">Drivers</a>
-        <a href="#shippers" style="color:#101012">Shippers</a>
+        <a href="shippers.html" style="color:#101012">Shippers</a>
         <a href="mechanic-shop.html" style="color:#101012;white-space:nowrap">Mechanic Shop</a>
         <a href="https://www.dallasbigrigparking.com" target="_blank" rel="noopener" style="color:#101012;white-space:nowrap">Parking</a>
         <a href="#about" style="color:#101012">About</a>
@@ -80,21 +80,21 @@
 
   <sc-if value="{{ mobile }}" hint-placeholder-val="{{ false }}">
   <section id="top" style="background:#101012;color:#fff">
-    <img src="assets/fleet-hero.png" alt="Matt Express fleet at the yard" style="width:100%;height:230px;object-fit:cover;object-position:50% 60%;display:block" />
+    <img src="assets/fleet-hero.png" alt="Matt Express fleet at the yard" style="width:100%;height:210px;object-fit:cover;object-position:50% 45%;display:block" />
     <div style="padding:26px 18px 34px">
       <div style="display:inline-block;background:#ED1C24;padding:6px 12px;font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:0.1em;white-space:nowrap">Delivered with pride.</div>
       <h1 style="font-size:32px;line-height:1.04;font-weight:900;text-transform:uppercase;margin-top:18px">Freight that moves on time, every time</h1>
       <p style="margin-top:16px;font-size:16px;line-height:1.55;color:rgba(255,255,255,0.78)">A Dallas-based carrier running local, regional and long haul lanes across the country - with our own drivers, our own trucks and our own shop keeping them rolling.</p>
       <div style="display:grid;gap:10px;margin-top:24px">
         <a href="https://intelliapp.driverapponline.com/c/mattexpress" target="_blank" rel="noopener" style="background:#ED1C24;color:#fff;padding:16px 20px;font-size:15px;font-weight:800;text-transform:uppercase;letter-spacing:0.07em;text-align:center">Drive with us</a>
-        <a href="#shippers" style="border:2px solid rgba(255,255,255,0.5);color:#fff;padding:14px 20px;font-size:15px;font-weight:800;text-transform:uppercase;letter-spacing:0.07em;text-align:center">Ship with us</a>
+        <a href="shippers.html" style="border:2px solid rgba(255,255,255,0.5);color:#fff;padding:14px 20px;font-size:15px;font-weight:800;text-transform:uppercase;letter-spacing:0.07em;text-align:center">Ship with us</a>
       </div>
     </div>
   </section>
   </sc-if>
   <sc-if value="{{ desktop }}" hint-placeholder-val="{{ true }}">
-  <section id="top" style="position:relative;background:#101012;min-height:min(78vh,720px);display:flex;align-items:center;overflow:hidden">
-    <img src="assets/fleet-hero.png" alt="Matt Express fleet at the yard" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;opacity:0.92">
+  <section id="top" style="position:relative;background:#101012;min-height:min(64vh,600px);display:flex;align-items:center;overflow:hidden">
+    <img src="assets/fleet-hero.png" alt="Matt Express fleet at the yard" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 38%;display:block;opacity:0.92">
     <div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,10,12,0.86) 0%,rgba(10,10,12,0.55) 45%,rgba(10,10,12,0.05) 75%)"></div>
     <div style="position:relative;width:100%">
       <div style="max-width:1280px;margin:0 auto;padding:clamp(40px,8vw,56px) clamp(18px,4vw,32px);width:100%">
@@ -104,7 +104,7 @@
           <p style="margin-top:24px;font-size:clamp(16px,4vw,20px);line-height:1.5;color:rgba(255,255,255,0.82);max-width:560px">A Dallas-based carrier running local, regional and long haul lanes across the country - with our own drivers, our own trucks and our own shop keeping them rolling.</p>
           <div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:36px">
             <a href="https://intelliapp.driverapponline.com/c/mattexpress" target="_blank" rel="noopener" style="background:#ED1C24;color:#fff;padding:16px clamp(22px,5vw,32px);font-size:15px;font-weight:800;text-transform:uppercase;letter-spacing:0.08em;border-radius:2px" style-hover="background:#fff;color:#101012">Drive with us</a>
-            <a href="#shippers" style="background:transparent;color:#fff;border:2px solid rgba(255,255,255,0.55);padding:14px clamp(22px,5vw,32px);font-size:15px;font-weight:800;text-transform:uppercase;letter-spacing:0.08em;border-radius:2px" style-hover="background:#fff;color:#101012;border-color:#fff">Ship with us</a>
+            <a href="shippers.html" style="background:transparent;color:#fff;border:2px solid rgba(255,255,255,0.55);padding:14px clamp(22px,5vw,32px);font-size:15px;font-weight:800;text-transform:uppercase;letter-spacing:0.08em;border-radius:2px" style-hover="background:#fff;color:#101012;border-color:#fff">Ship with us</a>
           </div>
         </div>
       </div>
@@ -193,8 +193,8 @@
         <h2 style="font-size:34px;font-weight:900;text-transform:uppercase;margin-top:14px;line-height:1.05">Capacity you can<br>actually count on.</h2>
         <p style="margin-top:16px;font-size:17px;line-height:1.6;color:rgba(255,255,255,0.72)">Asset-based dry van capacity out of Dallas with live tracking, one point of contact and a team that calls you before you have to call us.</p>
         <div style="margin-top:auto;padding-top:28px;display:flex;gap:12px;flex-wrap:wrap">
-          <a href="#quote" style="background:#ED1C24;color:#fff;padding:14px clamp(20px,4vw,26px);font-size:14px;font-weight:800;text-transform:uppercase;letter-spacing:0.08em" style-hover="background:#fff;color:#101012">Request a quote</a>
-          <a href="#shippers" style="color:#fff;padding:15px 4px;font-size:14px;font-weight:800;text-transform:uppercase;letter-spacing:0.08em;border-bottom:2px solid #ED1C24" style-hover="color:#fff">Our services</a>
+          <a href="shippers.html#quote" style="background:#ED1C24;color:#fff;padding:14px clamp(20px,4vw,26px);font-size:14px;font-weight:800;text-transform:uppercase;letter-spacing:0.08em" style-hover="background:#fff;color:#101012">Request a quote</a>
+          <a href="shippers.html" style="color:#fff;padding:15px 4px;font-size:14px;font-weight:800;text-transform:uppercase;letter-spacing:0.08em;border-bottom:2px solid #ED1C24" style-hover="color:#fff">Our services</a>
         </div>
       </div>
     </div>
@@ -451,7 +451,7 @@
           <div style="display:flex;gap:18px;flex-wrap:wrap;font-weight:800">
             <span style="color:#101012">Copyright 2026</span>
             <a href="#drivers">Drivers</a>
-            <a href="#shippers">Shippers</a>
+            <a href="shippers.html">Shippers</a>
             <a href="mechanic-shop.html">Mechanic Shop</a>
             <a href="https://www.dallasbigrigparking.com" target="_blank" rel="noopener">Truck Parking</a>
             <a href="#location">Location</a>
