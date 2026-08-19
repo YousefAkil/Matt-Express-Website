@@ -35,6 +35,31 @@
     
   </div>
 
+  <sc-if value="{{ mobile }}" hint-placeholder-val="{{ false }}">
+  <header style="position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid #e6e6e8">
+    <div style="padding:10px 16px;display:flex;align-items:center;gap:12px">
+      <a href="#top" style="display:block;flex:0 0 auto"><img src="assets/logo-mark.png" alt="Matt Express Inc." style="height:30px;width:auto;display:block" /></a>
+      <a href="https://intelliapp.driverapponline.com/c/mattexpress" target="_blank" rel="noopener" style="margin-left:auto;background:#ED1C24;color:#fff;padding:11px 16px;font-size:13px;font-weight:800;text-transform:uppercase;letter-spacing:0.06em;white-space:nowrap">Apply</a>
+      <button type="button" onClick="{{ toggleMenu }}" aria-label="Menu" style="flex:0 0 auto;width:46px;height:46px;border:1px solid #d9d9de;background:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;cursor:pointer;padding:0">
+        <span style="display:block;width:22px;height:2px;background:#101012"></span>
+        <span style="display:block;width:22px;height:2px;background:#101012"></span>
+        <span style="display:block;width:22px;height:2px;background:#101012"></span>
+      </button>
+    </div>
+    <sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
+      <nav style="display:flex;flex-direction:column;padding:4px 16px 18px;background:#fff;border-top:1px solid #e6e6e8">
+          <a href="#drivers" onClick="{{ closeMenu }}" style="color:#101012;font-size:17px;font-weight:800;text-transform:uppercase;letter-spacing:0.06em;padding:14px 0;border-bottom:1px solid #e6e6e8">Drivers</a>
+          <a href="#shippers" onClick="{{ closeMenu }}" style="color:#101012;font-size:17px;font-weight:800;text-transform:uppercase;letter-spacing:0.06em;padding:14px 0;border-bottom:1px solid #e6e6e8">Shippers</a>
+          <a href="mechanic-shop.html" onClick="{{ closeMenu }}" style="color:#101012;font-size:17px;font-weight:800;text-transform:uppercase;letter-spacing:0.06em;padding:14px 0;border-bottom:1px solid #e6e6e8">Mechanic Shop</a>
+          <a href="https://www.dallasbigrigparking.com" target="_blank" rel="noopener" onClick="{{ closeMenu }}" style="color:#101012;font-size:17px;font-weight:800;text-transform:uppercase;letter-spacing:0.06em;padding:14px 0;border-bottom:1px solid #e6e6e8">Truck Parking</a>
+          <a href="#about" onClick="{{ closeMenu }}" style="color:#101012;font-size:17px;font-weight:800;text-transform:uppercase;letter-spacing:0.06em;padding:14px 0;border-bottom:1px solid #e6e6e8">About</a>
+          <a href="#location" onClick="{{ closeMenu }}" style="color:#101012;font-size:17px;font-weight:800;text-transform:uppercase;letter-spacing:0.06em;padding:14px 0;border-bottom:1px solid #e6e6e8">Location</a>
+          <a href="tel:8172591499" onClick="{{ closeMenu }}" style="color:#101012;font-size:17px;font-weight:800;text-transform:uppercase;letter-spacing:0.06em;padding:14px 0;border-bottom:1px solid #e6e6e8">Call 817-259-1499</a>
+      </nav>
+    </sc-if>
+  </header>
+  </sc-if>
+  <sc-if value="{{ desktop }}" hint-placeholder-val="{{ true }}">
   <header style="position:sticky;top:0;z-index:50;background:rgba(255,255,255,0.96);backdrop-filter:blur(8px);border-bottom:1px solid #e6e6e8">
     <div style="max-width:1280px;margin:0 auto;padding:12px clamp(14px,4vw,32px);display:flex;align-items:center;gap:clamp(16px,2.5vw,40px)">
       <a href="#top" style="display:block;flex:0 0 auto"><img src="assets/logo-mark.png" alt="Matt Express Inc." style="height:clamp(30px,7vw,42px);width:auto;display:block"></a>
@@ -51,7 +76,23 @@
       </div>
     </div>
   </header>
+  </sc-if>
 
+  <sc-if value="{{ mobile }}" hint-placeholder-val="{{ false }}">
+  <section id="top" style="background:#101012;color:#fff">
+    <img src="assets/fleet.png" alt="Matt Express fleet at the yard" style="width:100%;height:230px;object-fit:cover;object-position:50% 60%;display:block" />
+    <div style="padding:26px 18px 34px">
+      <div style="display:inline-block;background:#ED1C24;padding:6px 12px;font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:0.1em;white-space:nowrap">Delivered with pride.</div>
+      <h1 style="font-size:32px;line-height:1.04;font-weight:900;text-transform:uppercase;margin-top:18px">Freight that moves on time, every time</h1>
+      <p style="margin-top:16px;font-size:16px;line-height:1.55;color:rgba(255,255,255,0.78)">A Dallas-based carrier running local, regional and long haul lanes across the country - with our own drivers, our own trucks and our own shop keeping them rolling.</p>
+      <div style="display:grid;gap:10px;margin-top:24px">
+        <a href="https://intelliapp.driverapponline.com/c/mattexpress" target="_blank" rel="noopener" style="background:#ED1C24;color:#fff;padding:16px 20px;font-size:15px;font-weight:800;text-transform:uppercase;letter-spacing:0.07em;text-align:center">Drive with us</a>
+        <a href="#shippers" style="border:2px solid rgba(255,255,255,0.5);color:#fff;padding:14px 20px;font-size:15px;font-weight:800;text-transform:uppercase;letter-spacing:0.07em;text-align:center">Ship with us</a>
+      </div>
+    </div>
+  </section>
+  </sc-if>
+  <sc-if value="{{ desktop }}" hint-placeholder-val="{{ true }}">
   <section id="top" style="position:relative;background:#101012;min-height:min(78vh,720px);display:flex;align-items:center;overflow:hidden">
     <img src="assets/fleet.png" alt="Matt Express fleet at the yard" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;opacity:0.92">
     <div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,10,12,0.86) 0%,rgba(10,10,12,0.55) 45%,rgba(10,10,12,0.05) 75%)"></div>
@@ -69,6 +110,7 @@
       </div>
     </div>
   </section>
+  </sc-if>
 
   <section style="background:#101012;border-top:4px solid #ED1C24;border-bottom:1px solid #e6e6e8;overflow:hidden">
     <div style="position:relative;padding:26px 0">
@@ -430,9 +472,23 @@
 </x-dc>
 <script type="text/x-dc" data-dc-script data-props="{}">
 class Component extends DCLogic {
-  state = { sent: false };
+  state = { sent: false, menuOpen: false, mobile: typeof window !== "undefined" && window.innerWidth < 900 };
+  componentDidMount() {
+    this._onResize = () => {
+      const m = window.innerWidth < 900;
+      if (m !== this.state.mobile) this.setState({ mobile: m, menuOpen: false });
+    };
+    window.addEventListener("resize", this._onResize);
+    this._onResize();
+  }
+  componentWillUnmount() { window.removeEventListener("resize", this._onResize); }
   renderVals() {
     return {
+      mobile: this.state.mobile,
+      desktop: !this.state.mobile,
+      menuOpen: this.state.menuOpen,
+      toggleMenu: () => this.setState(s => ({ menuOpen: !s.menuOpen })),
+      closeMenu: () => this.setState({ menuOpen: false }),
       quoteNote: this.state.sent
         ? "Thanks — we received your request and will follow up shortly."
         : "We reply to quote requests within one business day.",

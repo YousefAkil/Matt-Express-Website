@@ -33,6 +33,31 @@
     <span>817-259-1499</span>
   </div>
 
+  <sc-if value="{{ mobile }}" hint-placeholder-val="{{ false }}">
+  <header style="position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid #e6e6e8">
+    <div style="padding:10px 16px;display:flex;align-items:center;gap:12px">
+      <a href="index.html" style="display:block;flex:0 0 auto"><img src="assets/logo-mark.png" alt="Matt Express Inc." style="height:30px;width:auto;display:block" /></a>
+      <a href="#book" style="margin-left:auto;background:#ED1C24;color:#fff;padding:11px 16px;font-size:13px;font-weight:800;text-transform:uppercase;letter-spacing:0.06em;white-space:nowrap">Book</a>
+      <button type="button" onClick="{{ toggleMenu }}" aria-label="Menu" style="flex:0 0 auto;width:46px;height:46px;border:1px solid #d9d9de;background:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;cursor:pointer;padding:0">
+        <span style="display:block;width:22px;height:2px;background:#101012"></span>
+        <span style="display:block;width:22px;height:2px;background:#101012"></span>
+        <span style="display:block;width:22px;height:2px;background:#101012"></span>
+      </button>
+    </div>
+    <sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
+      <nav style="display:flex;flex-direction:column;padding:4px 16px 18px;background:#fff;border-top:1px solid #e6e6e8">
+          <a href="#services" onClick="{{ closeMenu }}" style="color:#101012;font-size:17px;font-weight:800;text-transform:uppercase;letter-spacing:0.06em;padding:14px 0;border-bottom:1px solid #e6e6e8">Services</a>
+          <a href="#repairs" onClick="{{ closeMenu }}" style="color:#101012;font-size:17px;font-weight:800;text-transform:uppercase;letter-spacing:0.06em;padding:14px 0;border-bottom:1px solid #e6e6e8">Repair list</a>
+          <a href="#book" onClick="{{ closeMenu }}" style="color:#101012;font-size:17px;font-weight:800;text-transform:uppercase;letter-spacing:0.06em;padding:14px 0;border-bottom:1px solid #e6e6e8">Book &amp; pay</a>
+          <a href="#visit" onClick="{{ closeMenu }}" style="color:#101012;font-size:17px;font-weight:800;text-transform:uppercase;letter-spacing:0.06em;padding:14px 0;border-bottom:1px solid #e6e6e8">Location</a>
+          <a href="index.html" onClick="{{ closeMenu }}" style="color:#101012;font-size:17px;font-weight:800;text-transform:uppercase;letter-spacing:0.06em;padding:14px 0;border-bottom:1px solid #e6e6e8">Home</a>
+          <a href="https://www.dallasbigrigparking.com" target="_blank" rel="noopener" onClick="{{ closeMenu }}" style="color:#101012;font-size:17px;font-weight:800;text-transform:uppercase;letter-spacing:0.06em;padding:14px 0;border-bottom:1px solid #e6e6e8">Truck Parking</a>
+          <a href="tel:8172591499" onClick="{{ closeMenu }}" style="color:#101012;font-size:17px;font-weight:800;text-transform:uppercase;letter-spacing:0.06em;padding:14px 0;border-bottom:1px solid #e6e6e8">Call 817-259-1499</a>
+      </nav>
+    </sc-if>
+  </header>
+  </sc-if>
+  <sc-if value="{{ desktop }}" hint-placeholder-val="{{ true }}">
   <header style="position:sticky;top:0;z-index:50;background:rgba(255,255,255,0.96);backdrop-filter:blur(8px);border-bottom:1px solid #e6e6e8">
     <div style="max-width:1280px;margin:0 auto;padding:12px clamp(14px,4vw,32px);display:flex;align-items:center;gap:clamp(16px,2.5vw,40px)">
       <a href="index.html" style="display:block;flex:0 0 auto"><img src="assets/logo-mark.png" alt="Matt Express Inc." style="height:clamp(30px,7vw,42px);width:auto;display:block" /></a>
@@ -48,7 +73,23 @@
       </div>
     </div>
   </header>
+  </sc-if>
 
+  <sc-if value="{{ mobile }}" hint-placeholder-val="{{ false }}">
+  <section style="background:#101012;color:#fff">
+    <img src="assets/shop-hero.png" alt="Technician working on a tractor in the Matt Express shop bay" style="width:100%;height:220px;object-fit:cover;object-position:60% 50%;display:block" />
+    <div style="padding:26px 18px 34px">
+      <div style="display:inline-block;background:#ED1C24;padding:6px 12px;font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:0.1em">Mechanic Shop</div>
+      <h1 style="font-size:31px;line-height:1.05;font-weight:900;text-transform:uppercase;margin-top:18px">Tractor &amp; trailer repair in Irving</h1>
+      <p style="margin-top:16px;font-size:16px;line-height:1.55;color:rgba(255,255,255,0.78)">Full-service heavy duty shop. PM service, DOT inspections, brakes, tires, air systems and trailer work &mdash; booked online, paid with Square.</p>
+      <div style="display:grid;gap:10px;margin-top:24px">
+        <a href="#book" style="background:#ED1C24;color:#fff;padding:16px 20px;font-size:15px;font-weight:800;text-transform:uppercase;letter-spacing:0.07em;text-align:center">Book &amp; pay online</a>
+        <a href="tel:8172591499" style="border:2px solid rgba(255,255,255,0.5);color:#fff;padding:14px 20px;font-size:15px;font-weight:800;text-transform:uppercase;letter-spacing:0.07em;text-align:center">Call the shop</a>
+      </div>
+    </div>
+  </section>
+  </sc-if>
+  <sc-if value="{{ desktop }}" hint-placeholder-val="{{ true }}">
   <section style="position:relative;background:#101012;min-height:min(56vh,520px);display:flex;align-items:center;overflow:hidden">
     <img src="assets/shop-hero.png" alt="Technician working on a tractor in the Matt Express shop bay" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;display:block;opacity:0.9" />
     <div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,10,12,0.88) 0%,rgba(10,10,12,0.5) 50%,rgba(10,10,12,0.08) 80%)"></div>
@@ -66,6 +107,7 @@
       </div>
     </div>
   </section>
+  </sc-if>
 
   <section style="background:#101012;border-top:4px solid #ED1C24;border-bottom:1px solid #e6e6e8">
     <div style="max-width:1280px;margin:0 auto;padding:20px clamp(18px,4vw,32px);display:flex;gap:clamp(20px,4vw,56px);flex-wrap:wrap;justify-content:space-between">
@@ -286,8 +328,23 @@
 </x-dc>
 <script type="text/x-dc" data-dc-script data-props="{&quot;squareCheckoutUrl&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;https://squareup.com/&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Checkout&quot;}}">
 class Component extends DCLogic {
+  state = { menuOpen: false, mobile: typeof window !== "undefined" && window.innerWidth < 900 };
+  componentDidMount() {
+    this._onResize = () => {
+      const m = window.innerWidth < 900;
+      if (m !== this.state.mobile) this.setState({ mobile: m, menuOpen: false });
+    };
+    window.addEventListener("resize", this._onResize);
+    this._onResize();
+  }
+  componentWillUnmount() { window.removeEventListener("resize", this._onResize); }
   renderVals() {
     return {
+      mobile: this.state.mobile,
+      desktop: !this.state.mobile,
+      menuOpen: this.state.menuOpen,
+      toggleMenu: () => this.setState(s => ({ menuOpen: !s.menuOpen })),
+      closeMenu: () => this.setState({ menuOpen: false }),
       squareUrl: this.props.squareCheckoutUrl || "https://squareup.com/",
     };
   }
